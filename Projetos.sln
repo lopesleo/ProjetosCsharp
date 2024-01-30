@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test1", "test1\test1.csproj", "{493E3F7F-A2A2-4AF4-B224-0B773CDBC51D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CriptografiaDeNavio", "CriptografiaDeNavio\CriptografiaDeNavio.csproj", "{8363E064-90AE-4A02-A171-CF38CB35EA3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{493E3F7F-A2A2-4AF4-B224-0B773CDBC51D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493E3F7F-A2A2-4AF4-B224-0B773CDBC51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493E3F7F-A2A2-4AF4-B224-0B773CDBC51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493E3F7F-A2A2-4AF4-B224-0B773CDBC51D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8363E064-90AE-4A02-A171-CF38CB35EA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8363E064-90AE-4A02-A171-CF38CB35EA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8363E064-90AE-4A02-A171-CF38CB35EA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8363E064-90AE-4A02-A171-CF38CB35EA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE29F5B6-76D0-4DEB-9BE3-5DC8163824A6}
+	EndGlobalSection
+EndGlobal
