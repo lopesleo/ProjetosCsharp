@@ -4,6 +4,7 @@ namespace CriptografiaDeNavio
 
     class Program
     {
+        const int DuasUltimasCasas = 2;
         static void Main(string[] args)
         {
             string mensagemCriptografada = "10010110 11110111 01010110 00000001 00010111 00100110 01010111 00000001 00010111 01110110 01010111 00110110 11110111 11010111 01010111 00000011";
@@ -25,7 +26,7 @@ namespace CriptografiaDeNavio
 
 
             string mensagemFinal = ConverteBinarioParaAscii(Blocos);
-            Console.WriteLine("\nMensagem desencriptada: " + mensagemFinal);
+            Console.WriteLine("\nMensagem decifrada: " + mensagemFinal);
             Console.ReadLine();
         }
 
@@ -47,26 +48,19 @@ namespace CriptografiaDeNavio
             {
                 char[] chars = mensagem[i].ToCharArray();
 
-                if (chars[chars.Length - 1] == '0')
+                for (int j = chars.Length - 2; j < chars.Length; j++)
                 {
-                    chars[chars.Length - 1] = '1';
+                    chars[j] = InverteBit(chars[j]);
                 }
-                else
-                {
-                    chars[chars.Length - 1] = '0';
-                }
-                if (chars[chars.Length - 2] == '0')
-                {
-                    chars[chars.Length - 2] = '1';
-                }
-                else
-                {
-                    chars[chars.Length - 2] = '0';
-                }
+
                 mensagem[i] = new string(chars);
             }
-
             return mensagem;
+        }
+
+        public static char InverteBit(char bit)
+        {
+            return bit == '0' ? '1' : '0';
         }
 
         public static string[] Inverte4Bits(string[] mensagem)
