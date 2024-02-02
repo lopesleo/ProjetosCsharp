@@ -20,7 +20,7 @@ namespace MenorDistanciaEntreArrays
             else if (escolha == 2)
             {
 
-                array1 = InsereNumeroArray(1)
+                array1 = InsereNumeroArray(1);
                 array2 = InsereNumeroArray(2);
 
             }
@@ -35,11 +35,12 @@ namespace MenorDistanciaEntreArrays
             var resultado = MenorDistancia(array1, array2);
             
             int menorDistancia = resultado["Menor Distancia"];
-            int[] numerosUtilizados = resultado["Numeros utilizados"];
+            int numero1 = resultado["valor1"];
+            int numero2 = resultado["valor2"];
            
             
             Console.WriteLine("Menor distancia: " + menorDistancia);
-            Console.WriteLine("Numeros utilizados: " + numerosUtilizados[0] + " e " + numerosUtilizados[1]);
+            Console.WriteLine("Numeros utilizados: " + numero1 + " e " + numero2);
             
 
             Console.ReadLine();
@@ -83,7 +84,7 @@ namespace MenorDistanciaEntreArrays
             Random random = new Random();
             for (int i = 0; i < 10; i++)
             {
-                array.Add(random.Next(0, 100));
+                array.Add(random.Next(0, 1000));
             }
         }
 
@@ -108,11 +109,13 @@ namespace MenorDistanciaEntreArrays
             }
 
             resultado.Add("Menor Distancia", menorDistancia);
-            resultado.Add("Numeros utilizados", numerosUtilizados);
+            foreach(var item in numerosUtilizados)
+            {
+                resultado.Add("valor" + (Array.IndexOf(numerosUtilizados, item) + 1), item);
+            }
 
             return resultado;
-            //Console.WriteLine("Menor distancia: " + menorDistancia);
-            //Console.WriteLine("Numeros utilizados: " + numerosUtilizados[0] + " e " + numerosUtilizados[1]);
+            
         }
     }
 }
